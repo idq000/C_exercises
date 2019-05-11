@@ -9,18 +9,21 @@ int main(int argc, char *argv[])
 	}
 	
 	int i = 0;
+	char letter = ','; //initialize letter with a comma
+	
 	for (i = 0; argv[1][i] != '\0'; i++){
-		
+	
+		/* ASCII upper case letters range from 65d to 90d
+		   To convert to lower case letters, add 32d */
+		   
 		if (argv[1][i] >= 65 && argv[1][i] <= 90){
 			argv[1][i] += 32;
 		}
 		
-		//printf("%d\n",argv[1][i]);
-		
-		char letter = argv[1][i];
+		letter = argv[1][i];
 		
 		
-		switch(letter){
+		/*switch(letter){
 			case 'a':
 				printf("%d: 'A'\n", i);
 				break;
@@ -50,6 +53,20 @@ int main(int argc, char *argv[])
 
 			default:
 				printf("%d: %c is not a vowel\n", i, letter);
+		}*/
+		
+		if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u'){
+			
+			//print the upper case letter as in the switch example
+			printf("%d: '%c'\n", i, letter-32);	
+		
+		} else if (letter == 'y' && i > 2){
+			
+			printf("%d: 'Y'\n", i);
+			
+		} else {
+		
+			printf("%d: %c is not a vowel\n", i, letter);
 		}
 	
 	}
