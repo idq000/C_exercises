@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 		letter = argv[1][i];
 		
 		
-		/*switch(letter){
+		switch(letter){
 			case 'a':
 				printf("%d: 'A'\n", i);
 				break;
@@ -48,14 +48,20 @@ int main(int argc, char *argv[])
 				if (i > 2){
 					//it's only sometimes Y
 					printf("%d: 'Y'\n", i);
+					//break;
 				}
-				break;		
-
+				break;
+			case 'Z':
+				//This case should never be triggered 
+				//If it is, then it is fallthrough from the previous case
+				printf("This is fallthrough.\n");		
+				break;	
+				
 			default:
 				printf("%d: %c is not a vowel\n", i, letter);
-		}*/
+		}
 		
-		if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u'){
+		/*if (letter == 'a' || letter == 'e' || letter == 'i' || letter == 'o' || letter == 'u'){
 			
 			//print the upper case letter as in the switch example
 			printf("%d: '%c'\n", i, letter-32);	
@@ -67,7 +73,7 @@ int main(int argc, char *argv[])
 		} else {
 		
 			printf("%d: %c is not a vowel\n", i, letter);
-		}
+		}*/
 	
 	}
 	
