@@ -2,8 +2,8 @@
 
 int main(int argc, char *argv[])
 {
-	int numbers[4] = { 'a', 'b', 'c' };
-	char name[4] = { 'a' };
+	int numbers[4] = { 0 };
+	char *name = "a";
 	
 	//first, print them out raw
 	printf("numbers: %d %d %d %d\n",
@@ -15,16 +15,13 @@ int main(int argc, char *argv[])
 	printf("name: %s\n", name);
 	
 	//set up the numbers
-	numbers[0] = 'a';
-	numbers[1] = 'b';
-	numbers[2] = 'c';
-	numbers[3] = 'd';
+	numbers[0] = 1;
+	numbers[1] = 2;
+	numbers[2] = 3;
+	numbers[3] = 4;
 	
 	//set up the name
-	name[0] = 'Z';
-	name[1] = 'e';
-	name[2] = 'd';
-	name[3] = '\0';
+	name = "Zed\0";
 	
 	//then print them out initialized
 	printf("numbers: %d %d %d %d\n",
