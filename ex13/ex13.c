@@ -18,6 +18,12 @@ int main(int argc, char *argv[])
 	};
 	
 	int num_states = 5;
+	argv[0] = states[0];
+	
+	printf("argv[0] is now %s\n",argv[0]);
+	
+	states[1] = argv[1];
+	printf("states[1] is now %s\n", states[1]);
 	
 	for (i = 0; i < num_states; i++){
 		printf("state %d: %s\n", i, states[i]);
