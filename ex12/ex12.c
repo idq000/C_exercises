@@ -12,6 +12,7 @@ int main(int argc, char *argv[])
 		
 	//WARNING:  On some systems you may have to change the
 	// %ld in this code to %u since it will use unsigned ints
+	areas[0] = 100;
 	printf("The size of an int: %ld\n", sizeof(int));
 	printf("The size of areas (int[]): %ld\n", sizeof(areas));
 	printf("The size of ints in areas: %ld\n",
