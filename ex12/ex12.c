@@ -12,8 +12,7 @@ int main(int argc, char *argv[])
 		
 	//WARNING:  On some systems you may have to change the
 	// %ld in this code to %u since it will use unsigned ints
-	name[0] = 100;
-	full_name[0] = 100;
+	areas[0] = name[0];
 	printf("The size of an int: %ld\n", sizeof(int));
 	printf("The size of areas (int[]): %ld\n", sizeof(areas));
 	printf("The size of ints in areas: %ld\n",
@@ -25,7 +24,7 @@ int main(int argc, char *argv[])
 	printf("The number of chars: %ld\n", sizeof(name)/sizeof(char));
 	
 	printf("The size of full_name (char[]): %ld\n", sizeof(full_name));
-	printf("The number of chars %ld\n", sizeof(full_name)/sizeof(char));
+	printf("The number of chars: %ld\n", sizeof(full_name)/sizeof(char));
 	
 	printf("name=\"%s\" and full_name=\"%s\"\n", name, full_name);
 	
