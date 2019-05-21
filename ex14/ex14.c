@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <ctype.h>
+#include <string.h>
 
 //forward declarations
 void print_letters(char arg[]);
@@ -9,6 +10,7 @@ void print_arguments(int argc, char *argv[])
 	int i = 0;
 	
 	for (i = 0; i < argc; i++){
+		printf("The length of argument %s is %lu\n", argv[i], strlen(argv[i]));
 		print_letters(argv[i]);
 	}
 }
