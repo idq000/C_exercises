@@ -19,7 +19,7 @@ void print_letters(char arg[])
 {
 	int i = 0;
 	
-	for (i = 0; i < arg[i] != '\0'; i++){
+	for (i = 0; i < strlen(arg); i++){
 		char ch = arg[i];
 		
 		if (isalpha(ch) || isblank(ch)){
